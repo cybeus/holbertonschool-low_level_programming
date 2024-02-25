@@ -1,22 +1,15 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
+*print_last_digit - function that print last digit of a number
+*@n: number to be targeted
+*Return: returns 0
+*/
+int print_last_digit(int n)
 {
-	int r;
+	int lastdigit = n % 10;
 
-	r = _abs(-1);
-	printf("%d\n", r);
-	r = _abs(0);
-	printf("%d\n", r);
-	r = _abs(1);
-	printf("%d\n", r);
-	r = _abs(-98);
-	printf("%d\n", r);
-	return (0);
+	if (lastdigit < 0)
+	lastdigit *= -1;
+	_putchar (lastdigit + '0');
+	return (lastdigit);
 }

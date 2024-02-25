@@ -1,23 +1,41 @@
 #include "main.h"
 /**
-*jack_bauer - prints each minute of the day
-*
-*Return:returns 0
-*/
-void jack_bauer(void)
+ * times_table - check lowercase.
+ */
+void times_table(void)
 {
-	int min, hour;
+	int i = 0, j = 0;
 
-	for (hour = 0; hour <= 23; hour++)
+	while (i < 10)
 	{
-	for (min = 0; min <= 59; min++)
-	{
-	_putchar((hour / 10) + '0');
-	_putchar((hour % 10) + '0');
-	_putchar(':');
-	_putchar((min / 10) + '0');
-	_putchar((min % 10) + '0');
-	_putchar(10);
-	}
+		while (j < 10)
+		{
+			if (i * j <= 9)
+			{
+				_putchar((i * j) % 10 + '0');
+			}
+			else
+			{
+				_putchar((i * j) / 10 + '0');
+				_putchar((i * j) % 10 + '0');
+			}
+			if (j != 9)
+			{
+				_putchar(',');
+				if (i * (j + 1) <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(' ');
+				}
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+		_putchar('\n');
 	}
 }

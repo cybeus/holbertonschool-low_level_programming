@@ -8,7 +8,7 @@
  */
 
 /**
- * print_alphabet - prints the alphabet
+ * print_alphabet_x10 - prints the alphabet
  *
  * Return: Always 0 (Success)
  *

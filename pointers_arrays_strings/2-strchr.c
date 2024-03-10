@@ -1,6 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 /**
  * *_strchr - prints buffer in hexa
  * @s: var
@@ -10,14 +9,10 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	int l = strlen(s);
-
-	for (i = 0; i <= l; i++)
+	for (; *s != '\0'; s++)
 	{
-		if (s[i] == c)
+		if (*s == c)
 		{
-			s += i;
 			return (s);
 		}
 	}

@@ -1,21 +1,23 @@
 #include "main.h"
+
 /**
- * more_numbers - Entry point
- * @i var;
- * Return: Always 0 (Success)
+ * more_numbers - function to print numbers
+ *
+ * Return: Always 0.
  */
 void more_numbers(void)
 {
-	char c;
-	int i;
+	int a, b;
 
-	for (i = 0; c < 10 ; i++)
+	for (a = 0; a < 10; a++)
 	{
-		for (c = 48; c < 58; c++)
+		for (b = 0; b < 15; b++)
 		{
-			_putchar(c);
+			if (b > 9)
+			_putchar(b / 10 + '0');
+			_putchar(b % 10 + '0');
 		}
+
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
